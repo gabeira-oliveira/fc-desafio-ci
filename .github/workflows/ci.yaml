@@ -17,8 +17,7 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: 15       
-      - run: dir && cd src           
-      - run: npm install
+      - run: npm install --prefix "./src"
       - run: npm test
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
